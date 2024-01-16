@@ -1,0 +1,752 @@
+:root {
+  --theme-color: #50b4ee;
+  --hero-para-color: #003b99;
+  --hero-main-heading-color: #003b99;
+  --button-color: #0062ff;
+  --button-hover: #003b99;
+  --about-para-color: #504e4d;
+  --card-hover-linear-gradient: linear-gradient(to right, #0575e6, #021b79);
+  --card-bg-Color: #ebf3fe;
+  --footer-bg-color: #040d12;
+}
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  font-family: "Roboto", sans-serif;
+}
+html {
+  font-size: 62.5%;
+  /* 1rem = 10px */
+}
+body {
+  width: 100vw;
+  max-width: 100%;
+  height: 100vh;
+}
+.container {
+  max-width: 142rem;
+  margin: 0 auto;
+  padding: 9.6rem 2.4rem;
+}
+/* Header Section's CSS Code Start's Here */
+header {
+  width: 100%;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 10rem;
+  background-color: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+header figure a img {
+  width: 18rem;
+  height: auto;
+}
+nav ul {
+  display: flex;
+  gap: 2rem;
+}
+
+nav ul li a {
+  font-size: 1.44rem;
+  text-transform: uppercase;
+  color: black;
+  position: relative;
+  padding-bottom: 1rem;
+  font-weight: 400;
+}
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0rem;
+  left: 0;
+}
+nav ul li a:hover {
+  & {
+    color: var(--theme-color);
+  }
+  &::after {
+    width: 100%;
+    border-bottom: 1px solid var(--theme-color);
+  }
+}
+
+/* Media Query */
+@media only screen and (max-width: 800px) {
+  header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  header figure a img {
+    width: 12rem;
+  }
+  nav {
+    padding: 3rem 0rem;
+  }
+  nav ul li a {
+    font-size: 1.4rem;
+  }
+}
+/* Header Section's CSS Code End's Here */
+
+/* Main Section CSS Code Start's Here */
+main {
+  background-image: linear-gradient(
+    to top right,
+    #3d86fa,
+    #4484fb,
+    #679eff,
+    #b3d2ff,
+    #ebf3fe
+  );
+
+  position: relative;
+}
+
+main .hero-text {
+  padding: 1rem 5rem;
+}
+
+main .hero-image figure img {
+  width: 90%;
+  height: auto;
+  transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+}
+main p:first-child {
+  color: var(--hero-para-color);
+  font-size: 1.53rem;
+  font-weight: 400;
+}
+main .hero-text h1 {
+  font-size: 4.6rem;
+  color: var(--hero-main-heading-color);
+  line-height: 1.5;
+  font-weight: 900;
+}
+.hero-text p:nth-child(3) {
+  color: white;
+  font-size: 1.8rem;
+  margin: 2rem 0rem 4rem 0rem;
+  letter-spacing: 0.1rem;
+  line-height: 1.5;
+  width: 100%;
+  /* padding-right: 40px; */
+  text-align: justify;
+}
+.hero-text button {
+  color: white;
+  background-color: var(--button-color);
+  padding: 1.2rem 3.2rem;
+  font-family: "Urbanist", sans-serif;
+  word-spacing: 0.3rem;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.hero-text button:hover {
+  background-color: var(--button-hover);
+}
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+main .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+/* Shape Divider CSS Code Start's Here */
+.custom-shape-divider-bottom-1705389553 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1705389553 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 117px;
+}
+
+.custom-shape-divider-bottom-1705389553 .shape-fill {
+  fill: #ffffff;
+}
+/* Shape Divider CSS Code End's Here */
+
+/* Media Query CSS Code Start's Here */
+@media only screen and (max-width: 999px) {
+  html {
+    font-size: 56.25%;
+  }
+  .hero .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0rem 0rem;
+  }
+  .hero-image {
+    order: 1;
+    width: 100%;
+    position: relative;
+  }
+
+  main .hero-image figure img {
+    width: 60%;
+    position: relative;
+    left: 20%;
+  }
+  .hero-text {
+    order: 2;
+  }
+  .hero-text button {
+    margin-bottom: 150px;
+  }
+}
+
+/* Media Query CSS Code End's Here */
+
+/* Main Section CSS Code End's Here */
+/* About Section Start's Here */
+.about .about-text h2 {
+  font-size: 3rem;
+  font-weight: 900;
+  padding: 2rem 0rem;
+}
+.about .about-text p {
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--about-para-color);
+}
+.about-cards figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  background-color: var(--card-bg-Color);
+  display: inline-block;
+}
+.about-cards img {
+  width: 10rem;
+  height: auto;
+}
+.about-cards {
+  display: flex;
+  padding: 5rem 0rem;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 5rem 0rem 5rem;
+}
+.card h2 {
+  font-size: 3rem;
+  padding: 2rem 0rem;
+  font-weight: 900;
+}
+.card p {
+  font-size: 1.6rem;
+  text-align: center;
+  font-weight: 400;
+  color: var(--about-para-color);
+  padding: 0rem 1rem;
+}
+.about-cards figure:hover {
+  transform: rotate(360deg);
+
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  & .card img {
+    background-image: var(--card-hover-linear-gradient);
+  }
+}
+.about-cards > div figure:hover {
+  background-image: var(--card-hover-linear-gradient);
+
+  & img {
+    rotate: 360deg;
+    transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+  }
+}
+/* Media Query Start's Here */
+@media only screen and (max-width: 950px) {
+  .about-cards {
+    display: flex;
+    flex-direction: column;
+  }
+  .card p {
+    padding: 0rem 5rem;
+  }
+}
+/* Media Query End's Here */
+/* About Section End's Here */
+/* Courses CSS Code Start's Here */
+
+.JS .fa-code {
+  color: #1673c3;
+  padding: 1.5rem;
+  background-color: #1672c3b9;
+  font-size: 2rem;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.Python .fa-laptop-code {
+  color: #68bf9b;
+  padding: 1.5rem;
+  background-color: #68bf9ba3;
+  font-size: 2rem;
+  border-radius: 50%;
+}
+.Cpp .fa-laptop-code {
+  color: #ff8b91;
+  padding: 1.5rem;
+  background-color: #ff8b91ac;
+  font-size: 2rem;
+  border-radius: 50%;
+}
+.Java .fa-laptop-code {
+  color: #183d3d;
+  padding: 1.5rem;
+  background-color: #183d3db3;
+  font-size: 2rem;
+  border-radius: 50%;
+}
+.SQL .fa-laptop-code {
+  color: #d988be;
+  padding: 1.5rem;
+  background-color: #d988bea9;
+  font-size: 2rem;
+  border-radius: 50%;
+}
+.HTML .fa-laptop-code {
+  color: #ff9b50;
+  padding: 1.5rem;
+  background-color: #ff9c50a9;
+  font-size: 2rem;
+  border-radius: 50%;
+}
+.CSS .fa-laptop-code {
+  color: #1450a3;
+  padding: 1.5rem;
+  background-color: #1450a3ba;
+  font-size: 2rem;
+  border-radius: 50%;
+}
+.courses .container h2 {
+  font-size: 3rem;
+  font-weight: 900;
+  padding-bottom: 1.5rem;
+}
+.courses .container p {
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--about-para-color);
+}
+.courses-details {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  gap: 5rem;
+  padding-top: 6rem;
+}
+.courses-details h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 2rem 0rem;
+}
+.courses-details p {
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: left;
+}
+.courses-details div {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  padding: 4rem 2rem;
+}
+.courses-details div:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+@media only screen and (max-width: 999px) {
+  .courses-details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media only screen and (max-width: 710px) {
+  .courses-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 600px) {
+  .courses-details {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+/* Courses CSS Code End's Here */
+/* Footer CSS Code Start's Here */
+footer {
+  background-color: var(--footer-bg-color);
+  position: relative;
+  z-index: 1;
+  margin-top: 10rem;
+}
+.Bootcamp {
+  position: absolute;
+  bottom: 70%;
+  left: 30%;
+  display: flex;
+  width: 50%;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  font-family: "Urbanist", sans-serif;
+  padding: 2rem 5rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.Bootcamp img {
+  width: 30rem;
+}
+.bootcamp-text h5 {
+  font-size: 3.5rem;
+  font-weight: 600;
+}
+.bootcamp-text p {
+  font-size: 2rem;
+  color: var(--about-para-color);
+  font-weight: 400;
+  padding: 2rem 0rem;
+}
+.bootcamp-text button {
+  background-color: var(--button-color);
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  border: none;
+  outline: none;
+}
+.bootcamp-text button:hover {
+  background-color: var(--button-hover);
+  cursor: pointer;
+}
+.social {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 12rem;
+  color: white;
+}
+.social-intro h5 {
+  font-size: 2.5rem;
+}
+.social-intro p {
+  font-size: 1.3rem;
+  padding: 1rem 0rem;
+}
+.social-media {
+  gap: 4rem;
+  margin-top: 2rem;
+}
+.social-media a {
+  padding: 2rem;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.social-media a i {
+  font-size: 2rem;
+  color: white;
+}
+
+.social-media a:hover {
+  background-color: #003b99;
+}
+.footer-courses h5 {
+  font-size: 2.5rem;
+  padding: 2rem 0rem;
+}
+.footer-courses ul li {
+  padding: 1rem 0rem;
+  font-size: 1.5rem;
+}
+.footer-pages h5 {
+  font-size: 2.5rem;
+  padding: 2rem 0rem;
+}
+.footer-pages ul li {
+  padding: 1rem 0rem;
+  font-size: 1.5rem;
+}
+.footer-pages ul li a {
+  color: white;
+}
+.footer-pages ul li a:hover {
+  color: var(--button-color);
+}
+@media only screen and (max-width: 965px) {
+  .bootcamp-text h5 {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  .Bootcamp {
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    left: 0;
+    bottom: 80%;
+    gap: 3rem;
+  }
+  .bootcamp-text button {
+    margin: 2rem 0rem;
+  }
+}
+@media only screen and (max-width: 965px) {
+  .bootcamp-text h5 {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+}
+.Bootcamp {
+  bottom: 65%;
+}
+.bootcamp-text p {
+  font-size: 1.5rem;
+}
+@media only screen and (max-width: 565px) {
+  .Bootcamp img {
+    width: 20rem;
+  }
+  .social {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 4rem;
+  }
+
+  .Bootcamp {
+    bottom: 85%;
+  }
+}
+/* Footer CSS Code End's Here */
+/* Contact CSS Code Start's Here */
+.contact {
+  padding: 8rem 0rem;
+}
+.contact h1 {
+  font-size: 4rem;
+  font-weight: 600;
+  font-family: "Urbanist", sans-serif;
+}
+.contact p {
+  font-size: 2rem;
+  font-weight: 400;
+  padding: 2rem 0rem 4rem 0rem;
+  font-family: "Urbanist", sans-serif;
+}
+.contact-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+.user-and-email {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0rem;
+  gap: 3rem;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+label {
+  font-size: 2rem;
+  padding-bottom: 2rem;
+}
+input,
+textarea {
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+}
+.message label {
+  padding-top: 2rem;
+}
+textarea {
+  margin-bottom: 2rem;
+}
+.submit input {
+  color: white;
+  background-color: var(--button-color);
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+.submit input:hover {
+  cursor: pointer;
+  background-color: var(--button-hover);
+}
+input:focus-visible,
+textarea:focus-visible {
+  border: 1px solid var(--button-color);
+  outline: 1px solid var(--button-color);
+}
+@media only screen and (max-width: 1173px) {
+  iframe {
+    width: 100%;
+    height: 450px;
+  }
+}
+@media only screen and (max-width: 750px) {
+  iframe {
+    width: 100%;
+    height: 300px;
+  }
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    width: 100%;
+    gap: 1rem;
+  }
+  form,
+  .map {
+    width: 100%;
+  }
+  .contact {
+    padding: 4rem 0rem 0rem;
+  }
+  .user-and-email {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    width: 100%;
+  }
+}
+/* Contact CSS Code End's Here */
+/* Blog CSS Code Start's Here */
+.blogs {
+  margin: 5rem 0rem;
+}
+.blog-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5rem;
+}
+.blog .container > h1 {
+  font-size: 4rem;
+  font-weight: 600;
+}
+.blog .container > p {
+  font-size: 2rem;
+  font-weight: 300;
+  padding: 3rem 0rem;
+}
+.blog-cards img {
+  width: 100%;
+}
+.fa-calendar,
+.fa-arrow-right {
+  color: var(--button-color);
+}
+.blog-date {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 2rem;
+}
+.blog-cards div:hover {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.blog-date > i {
+  font-size: 3rem;
+}
+.blog-date > p {
+  font-size: 2.3rem;
+  font-weight: 600;
+}
+.blog-caption p {
+  font-size: 2rem;
+  padding: 0rem 2rem;
+  padding-bottom: 2rem;
+  font-weight: 600;
+}
+@media only screen and (max-width: 1115px) {
+  .blog-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media only screen and (max-width: 782px) {
+  .blog-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 543px) {
+  .blog-cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+/* Blog CSS Code End's Here */
