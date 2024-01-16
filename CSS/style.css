@@ -552,6 +552,7 @@ footer {
   }
   .bootcamp-text button {
     margin: 2rem 0rem;
+    font-size: 1.5rem;
   }
 }
 @media only screen and (max-width: 965px) {
@@ -678,8 +679,16 @@ textarea:focus-visible {
   }
   .user-and-email {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+    gap: 2rem;
     flex: 1;
+    width: 100%;
+  }
+  .UserName {
+    width: 100%;
+  }
+  .Email {
     width: 100%;
   }
 }
@@ -750,3 +759,6 @@ textarea:focus-visible {
   }
 }
 /* Blog CSS Code End's Here */
+.hero-last-para {
+  text-align: justify;
+}
